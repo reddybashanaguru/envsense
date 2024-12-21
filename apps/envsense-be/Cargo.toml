@@ -1,0 +1,11 @@
+[package]
+name = "envsense-be"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.9"
+serde = "1.0.216"
+serde_json = "1.0.133"
+sqlx = "0.8.2"
+tokio = { version = "1.42.0", features = ["macros", "rt-multi-thread"] }
