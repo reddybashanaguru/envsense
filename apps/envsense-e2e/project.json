@@ -1,0 +1,10 @@
+{
+  "name": "envsense-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/envsense-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["envsense"],
+  "// targets": "to see all targets run: nx show project envsense-e2e --web",
+  "targets": {}
+}
