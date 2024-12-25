@@ -4,6 +4,7 @@ use crate::{models::user::User, utils::jwt};
 use std::sync::Arc;
 use crate::utils::db::DbConnection;
 
+
 pub async fn login(
     Extension(db): Extension<Arc<DbConnection>>, Json(user): Json<User>, 
 ) -> impl IntoResponse {

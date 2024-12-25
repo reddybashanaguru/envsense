@@ -5,13 +5,17 @@ use crate:: config::get_jwt_secret;
 
 #[derive(Serialize, Deserialize)]
 pub struct Claims {
-    pub sub: String,
+    pub name: String,
+    pub role: Option<String>,
+    pub email: String,
     pub exp: usize,
 }
 
 pub fn create_jwt(user: &User) -> String {
     let claims = Claims {
-        sub: user.username.clone(),
+        name: user.username.clone(),
+        role: user.role.clone(),
+        email: user.email.clone(),
         exp: 10000000000, // You can adjust expiration time
     };
 

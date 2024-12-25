@@ -12,6 +12,22 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  // experimental: {
+  //   appDir: true, // Enable the new App Router feature (optional)
+  //   turbo: true,  // Use Next.js Turbo Pack (if applicable)
+  // },
+  reactStrictMode: true, // Enforce React best practices
+  images: {
+    domains: ['example.com'], // Add any external image domains here
+  },
+  eslint: {
+    // Run ESLint on every build
+    ignoreDuringBuilds: false,
+  },
+  typescript: {
+    // Ensure type checking during builds
+    ignoreBuildErrors: false,
+  },
 };
 
 const plugins = [
