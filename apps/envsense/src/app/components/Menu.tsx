@@ -7,13 +7,13 @@ const menuItems = [
     title: "MENU",
     items: [
       {
-        icon: "/message.png",
+        icon: "/home.png",
         label: "Home",
         href: "/",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
-        icon: "/message.png",
+        icon: "/home.png",
         label: "Teachers",
         href: "/list/teachers",
         visible: ["admin", "teacher"],
