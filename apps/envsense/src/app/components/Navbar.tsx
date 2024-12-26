@@ -1,30 +1,51 @@
-import Image from "next/image"
+import Image from "next/image";
+import { MdSearch, MdMessage, MdNotifications, MdAccountCircle } from "react-icons/md"; // Material Design Icons
 
 const Navbar = () => {
   return (
-    <div className='flex items-center justify-between p-4'>
+    <div className="flex items-center justify-between p-4 bg-white shadow-sm h-16">
       {/* SEARCH BAR */}
-      <div className='hidden md:flex items-center gap-2 text-xs rounded-full ring-[1.5px] ring-gray-300 px-2'>
-        <Image src="/search.png" alt="" width={14} height={14}/>
-        <input type="text" placeholder="Search..." className="w-[200px] p-2 bg-transparent outline-none"/>
+      <div className="relative w-64">
+        <input
+          type="text"
+          placeholder="Search..."
+          className="w-full p-2 pl-8 bg-gray-100 border border-gray-300 rounded-lg text-sm text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
+        />
+        <MdSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={16} />
       </div>
+
       {/* ICONS AND USER */}
-      <div className='flex items-center gap-6 justify-end w-full'>
-        <div className='bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer'>
-          <Image src="/message.png" alt="" width={20} height={20}/>
+      <div className="flex items-center gap-6 justify-end w-full">
+        {/* Message Icon */}
+        <div className="bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-all relative">
+          <MdMessage size={20} className="text-gray-600" />
         </div>
-        <div className='bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer relative'>
-          <Image src="/announcement.png" alt="" width={20} height={20}/>
-          <div className='absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-purple-500 text-white rounded-full text-xs'>1</div>
+
+        {/* Notification Icon */}
+        <div className="relative">
+          <div className="bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer hover:scale-105 transition-all shadow-md">
+            <MdNotifications size={22} className="text-gray-600" />
+          </div>
+
+          {/* Notification Badge */}
+          <div className="absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center bg-indigo-500 text-white rounded-full text-xs font-semibold shadow-md">
+            1
+          </div>
         </div>
-        <div className='flex flex-col'>
-          <span className="text-xs leading-3 font-medium">John Doe</span>
-          <span className="text-[10px] text-gray-500 text-right">Admin</span>
+
+        {/* User Info */}
+        <div className="flex items-center gap-3">
+          <div className="flex flex-col text-right">
+            <span className="text-sm font-medium text-gray-800">John Doe</span>
+            <span className="text-xs text-gray-500">Admin</span>
+          </div>
+          <div className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center">
+            <MdAccountCircle size={36} className="text-gray-600" />
+          </div>
         </div>
-        <Image src="/avatar.png" alt="" width={36} height={36} className="rounded-full"/>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
