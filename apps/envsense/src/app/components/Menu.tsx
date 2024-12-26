@@ -1,4 +1,3 @@
-// src/components/Sidebar.tsx
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -144,9 +143,11 @@ const Sidebar = () => {
                     </div>
                     {activeMenu === item.title ? <MdExpandLess /> : <MdExpandMore />}
                   </div>
-                  {/* Sub-items */}
+                  {/* Sub-items with scrolling */}
                   {activeMenu === item.title && (
-                    <div className="bg-indigo-50 pl-6 py-2 space-y-1 max-h-[calc(100vh-10rem)] overflow-y-auto">
+                    <div
+                      className="bg-indigo-50 pl-6 py-2 space-y-1 max-h-96 overflow-y-auto"
+                    >
                       {item.subItems.map((subItem, subIndex) => (
                         <Link key={subIndex} href={subItem.link}>
                           <div className="block py-2 px-4 hover:bg-indigo-300 text-sm font-medium rounded-md">
