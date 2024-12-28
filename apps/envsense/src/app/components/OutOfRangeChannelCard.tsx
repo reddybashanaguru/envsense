@@ -4,10 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 
 interface ChannelData {
-  timeoutRange: string; // Time out of range, e.g., "5 minutes"
-  channelName: string; // Name of the channel
-  dataLoggerName: string; // Data logger name
-  location: string; // Location of the channel
+  timeoutRange: string;
+  channelName: string;
+  dataLoggerName: string;
+  location: string;
 }
 
 interface ChannelCardProp {
@@ -23,10 +23,8 @@ const OutOfRangeChannelCard: React.FC<ChannelCardProp> = ({
 }) => {
   return (
     <div className={`p-4 rounded-lg shadow-md ${backgroundColor}`}>
-      {/* Card Title */}
       <p className="text-m font-semibold mb-4 text-center">{title}</p>
 
-      {/* Table */}
       <div className="overflow-x-auto">
         <table className="min-w-full table-auto">
           <thead>

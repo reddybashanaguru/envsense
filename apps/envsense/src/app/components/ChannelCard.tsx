@@ -8,8 +8,8 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 interface ChannelCardProps {
   title: string;
-  chartData: number[]; // Values for the donut chart
-  backgroundColor?: string; // Optional background color
+  chartData: number[];
+  backgroundColor?: string;
 }
 
 const ChannelCard: React.FC<ChannelCardProps> = ({
@@ -23,32 +23,31 @@ const ChannelCard: React.FC<ChannelCardProps> = ({
       {
         data: chartData, // Data to be represented
         backgroundColor: [
-          '#36A2EB',
-          '#E5E5E5',
-          '#F1C40F',
-          '#9B59B6',
-          '#FF5733',
+          '#36A2EB', // Blue
+          '#E5E5E5', // Light Gray
+          '#F1C40F', // Yellow
+          '#9B59B6', // Purple
+          '#FF5733', // Red
         ], // Color for the donut sections
-        borderWidth: 0, // No border around the chart
+        borderWidth: 0,
       },
     ],
   };
 
   return (
-    <div className={`p-8 rounded-lg shadow-md ${backgroundColor}`}>
-      <div className="flex flex-col sm:flex-row items-center space-y-0 sm:space-y-0 sm:space-x-2">
-        <div className="flex flex-col items-center sm:items-start">
-          <h2 className="text-m font-semibold">{title}</h2>
-          {/* Infographic Donut Chart */}
-          <div
-            className="mt-4 sm:mt-0 sm:ml-4 pt-10"
-            style={{ width: '200px', height: '200px' }}
-          >
-            <Doughnut data={data} options={{ responsive: true }} />
-          </div>
+    <div className={`p-3 rounded-lg shadow-md ${backgroundColor}`}>
+      <h2 className="text-lg font-semibold text-center w-full truncate">
+        {title}
+      </h2>
+
+      <div className="flex justify-center items-center space-x-4 mt-4">
+        <div
+          className="flex-shrink-0 flex justify-center items-center"
+          style={{ width: '200px', height: '200px' }}
+        >
+          <Doughnut data={data} options={{ responsive: true }} />
         </div>
 
-        {/* Custom Legend (Right side of the chart) */}
         <div className="flex flex-col space-y-2 text-sm">
           {chartData.map((value, index) => (
             <div key={index} className="flex items-center space-x-2">

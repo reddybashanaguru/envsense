@@ -10,7 +10,7 @@ const DropdownMenu: React.FC = () => {
   };
 
   return (
-    <div className="mb-6 flex items-center justify-between space-x-4">
+    <div className="mb-6 flex items-center justify-between space-x-4 m-2">
       <div className="flex items-center text-center space-x-2">
         <select
           id="dropdown"
@@ -22,7 +22,6 @@ const DropdownMenu: React.FC = () => {
           <option value="option 1">option 2</option>
           <option value="option 2">option 2</option>
           
-          {/* More options */}
         </select>
         <label htmlFor="dropdown" className="text-sm font-semibold mr-2 border rounded-[2px] p-1">
           Your Default

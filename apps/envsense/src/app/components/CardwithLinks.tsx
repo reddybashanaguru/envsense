@@ -10,8 +10,8 @@ interface CardWithLinksProps {
 
 const CardWithLinks: React.FC<CardWithLinksProps> = ({ title, links }) => {
   return (
-    <div className="w-80 h-60 bg-white shadow-lg rounded-lg cursor-pointer p-4 flex flex-col">
-      <h2 className="text-xl font-bold text-black mb-4">{title}</h2>
+    <div className="w-[520px] h-55 bg-white shadow-lg rounded-lg cursor-pointer p-4 flex flex-col">
+      <h2 className="text-xl font-bold text-black text-center mb-4">{title}</h2>
       <div className="flex flex-col space-y-3 overflow-y-auto flex-1">
         {links.map((link, index) => (
           <Link
