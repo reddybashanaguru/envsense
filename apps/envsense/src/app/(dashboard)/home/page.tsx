@@ -1,7 +1,6 @@
 import { cookies } from 'next/headers'; // for server-side cookies handling
 import jwtDecode from 'jwt-decode'; // Import jwt-decode
-import Card from '../../components/Card'; // Import the Card component
-import Hardware from '../../register_hardware/page';
+
 
 async function fetchDevices(token: string) {
   const res = await fetch('http://localhost:8080/devices', {
@@ -57,8 +56,6 @@ export default async function Dashboard() {
 
   return (
     <div>
-      <Card />
-      {/* <Hardware /> */}
     </div>
   );
 }
