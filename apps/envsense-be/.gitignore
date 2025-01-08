@@ -1,0 +1,55 @@
+# Rust-specific
+# Compiled output
+/apps/envsense-be/target/
+**/target/
+/target/
+
+# Incremental compilation files
+**/target/debug/incremental/
+**/target/debug/
+**/target/debug/.fingerprint/
+**/target/debug/*.d
+
+# Dependency files
+**/deps/
+
+# Build artifacts
+*.rlib
+*.d
+*.so
+*.dylib
+*.dll
+*.bin
+*.exe
+
+# Dependency files
+Cargo.lock
+
+# Generated files
+**/*.rs.bk
+
+# Debugging files
+*.profdata
+*.gcno
+*.gcda
+*.profraw
+
+# Editor-specific files
+*.swp
+*.swo
+*.swn
+*.bak
+*~
+
+# Logs
+*.log
+
+# Optional Rustup binaries
+rustup-init.exe
+target/debug/*
+target/.rustc_info.json
+target/debug/envsense-be
+target/debug/*.d
+target/debug/envsense-be.d
+target/debug/.fingerprint/ahash-4521b56b98920842/lib-ahash.json
+target/debug/deps/libparking-03a7aa26782cfe79.rlib
