@@ -4,6 +4,7 @@
 // import EventCalendar from "@/components/EventCalendar";
 // import FinanceChart from "@/components/FinanceChart";
 // import UserCard from "@/components/UserCard";
+// import Card from "../../components/Card";
 
 const AdminPage = () => {
   return (
@@ -17,6 +18,7 @@ const AdminPage = () => {
           <UserCard type="teacher" />
           <UserCard type="parent" />
           <UserCard type="staff" /> */}
+          {/* <Card/> */}
         </div>
     </div>
     </div>

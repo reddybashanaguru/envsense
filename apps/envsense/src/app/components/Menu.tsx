@@ -29,15 +29,15 @@ const Sidebar = () => {
   };
 
   const menuItems = [
-    { title: "Overview", icon: <MdOutlineDashboard />, link: "/" },
+    { title: "Overview", icon: <MdOutlineDashboard />, link: "/home" },
     {
       title: "Monitoring Points",
       icon: <MdLocationOn />,
       subItems: [
         { title: "Locations", link: "/locations" },
-        { title: "Floor Plans", link: "/floor-plans" },
-        { title: "Equipment", link: "/equipment" },
-        { title: "Data Loggers", link: "/data-loggers" },
+        // { title: "Floor Plans", link: "/floorPlans" },
+        // { title: "Equipment", link: "/equipment" },
+        { title: "Devices", link: "/devices" },
         { title: "Channels", link: "/channels" },
       ],
     },
