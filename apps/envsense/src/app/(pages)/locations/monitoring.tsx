@@ -39,37 +39,40 @@ const dummyData = [
 ];
 
 const Monitor: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('Overview');
+  const [activeTab, setActiveTab] = useState<'Overview' | 'Floor Plan'>('Overview');
+
+  // Helper function to generate tab classnames
+  const getTabButtonClass = (tab: 'Overview' | 'Floor Plan') =>
+    `text-sm font-medium py-2 px-6 rounded-lg transition-all duration-200 ${
+      activeTab === tab
+        ? 'bg-blue-500 text-white shadow-lg'
+        : 'text-gray-600 hover:bg-gray-100'
+    }`;
 
   return (
-    <div className="ml-3">
-      <div className="flex space-x-4 mt-8">
+    <div className="ml-4 mt-4 bg-white rounded-lg shadow-md max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Tab Navigation */}
+      <nav className="flex space-x-6 mt-8 mb-6 border-b border-gray-200 pb-2">
         <button
-          className={`text-sm font-bold text-blue-500 ${
-            activeTab === 'Overview' ? 'underline' : ''
-          }`}
+          className={getTabButtonClass('Overview')}
           onClick={() => setActiveTab('Overview')}
         >
           Overview
         </button>
         <button
-          className={`text-sm font-bold text-blue-500 ${
-            activeTab === 'Floor Plan' ? 'underline' : ''
-          }`}
+          className={getTabButtonClass('Floor Plan')}
           onClick={() => setActiveTab('Floor Plan')}
         >
           Floor Plan
         </button>
-      </div>
+      </nav>
 
-      <div className="mt-2">
-        {activeTab === 'Overview' && (
+      {/* Tab Content */}
+      <div className="mt-6">
+        {activeTab === 'Overview' ? (
           <PointsTable title="Monitoring Points" data={dummyData} />
-        )}
-        {activeTab === 'Floor Plan' && (
-          <div>
-            <FloorPlan />
-          </div>
+        ) : (
+          <FloorPlan />
         )}
       </div>
     </div>
