@@ -101,13 +101,13 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Mobile Header */}
+      {/* Mobile Header
       <div className="lg:hidden bg-white text-black flex justify-between items-center p-4 shadow-md h-16">
         <h1 className="text-2xl font-semibold">EnvSense</h1>
         <button onClick={toggleSidebar} className="text-2xl">
           {isOpen ? <MdClose /> : <MdMenu />}
         </button>
-      </div>
+      </div> */}
 
       {/* Sidebar */}
       <div
@@ -165,12 +165,12 @@ const Sidebar = () => {
       </div>
 
       {/* Overlay for mobile */}
-      {isOpen && (
+      {/* {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={toggleSidebar}
         ></div>
-      )}
+      )} */}
     </>
   );
 };
