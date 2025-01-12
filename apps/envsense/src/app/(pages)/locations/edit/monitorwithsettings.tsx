@@ -81,6 +81,7 @@ const Settings: React.FC = () => {
         )}
         {activeTab === 'Settings' && (
           <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center ">
             <div className="  p-4 space-y-6">
               <h3 className="text-lg font-bold">Location Information</h3>
               <p className="text-sm text-gray-600 max-w-md">
@@ -119,6 +120,7 @@ const Settings: React.FC = () => {
                 <button className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-200">
                   Delete
                 </button>
+                </div>
               </div>
             </div>
           </div>

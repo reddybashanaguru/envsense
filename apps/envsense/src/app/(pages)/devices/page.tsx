@@ -1,6 +1,7 @@
 import React from 'react';
 import { EllipsisVerticalIcon } from '@heroicons/react/24/solid';
 import { FiSearch } from 'react-icons/fi';
+import Link from 'next/link';
 
 const cards = [
   {
@@ -78,9 +79,9 @@ const DataLoggers: React.FC = () => {
           />
           <FiSearch className="absolute left-3 top-3 h-5 w-5 text-gray-500" />
         </div>
-        <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200">
+        <Link href={'/registerHardware'} className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200">
           + Add Hardware
-        </button>
+        </Link>
       </div>
 
       <div className="mt-6">

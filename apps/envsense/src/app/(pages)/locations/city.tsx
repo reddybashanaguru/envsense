@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { MapPinIcon, Bars4Icon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 
 interface Props {
   initialCity: string;
@@ -44,11 +45,11 @@ const City: React.FC<Props> = ({ initialCity, subcity, sublocations }) => {
           >
             Manage Locations
           </button>
-          <button
+          <Link href={'/registerHardware'}
             className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-200"
           >
             + Add Hardware
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -63,12 +64,13 @@ const City: React.FC<Props> = ({ initialCity, subcity, sublocations }) => {
 
         <div className="flex flex-wrap space-x-2 overflow-x-auto">
           {sublocations.map((sublocation, index) => (
-            <p
+            <Link
               key={index}
+              href={'/locations/edit/{}'}
               className="text-sm text-gray-700 bg-blue-200 p-2 px-4 rounded-full mt-2 hover:bg-blue-300 transition duration-150 ease-in-out"
             >
               {sublocation}
-            </p>
+            </Link>
           ))}
         </div>
       </div>

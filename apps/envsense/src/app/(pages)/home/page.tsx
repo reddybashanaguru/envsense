@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'; // for server-side cookies handling
 // import jwtDecode from 'jwt-decode'; // Import jwt-decode
-import HomeComponent from './home_page';
+import HomeComponent from './homePage';
 
 
 async function fetchDevices(token: string) {
