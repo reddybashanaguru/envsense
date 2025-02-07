@@ -17,14 +17,14 @@ export default function HomeComponent() {
 
   return (
     <div>
-      <DropdownMenu />
+      {/* <DropdownMenu /> */}
 
       <div className="flex justify-evenly flex-row gap-2 p-2">
         <CardWithLinks
           title="Active Continous Monitoring Devices (CMS)"
           links={sampleLinks}
         />
-        <Link href={''}>
+        <Link href={'/alerts'}>
           <AlertCard
             title="Active Excursions"
             value="0"

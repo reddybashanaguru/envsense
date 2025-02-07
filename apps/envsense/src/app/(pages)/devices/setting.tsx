@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import DataForm from './dataloggerform';
+import DataForm from './newlocation';
 
 const tabContent = {
   datalogger: (

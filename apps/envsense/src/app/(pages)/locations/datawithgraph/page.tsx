@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import LineChart from '../linegraph';
-import Settings from '../setting';
+import LineChart from '../../devices/linegraph';
+import Settings from '../../devices/setting';
 
 interface DataChartProps {
   title: string;

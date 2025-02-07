@@ -1,4 +1,6 @@
-import ExistLocations from "./existlocations";
+
+
+import ExistLocations from '../(pages)/locations/existlocations';
 
 export default function NewLocation() {
   return (
@@ -40,7 +42,13 @@ export default function NewLocation() {
           </div>
         </div>
       </div>
-       <ExistLocations locations={['CITY PHARMACY SHARJAH','CITY PHARMACY JAFZA','CITY PHARMACY DUBAI',]} />
+      <ExistLocations
+        locations={[
+          'CITY PHARMACY SHARJAH',
+          'CITY PHARMACY JAFZA',
+          'CITY PHARMACY DUBAI'
+        ]}
+      />
     </div>
   );
 }

@@ -1,13 +1,11 @@
 import City from './city';
-import Monitor from './monitoring';
-// import NewLocation from './newlocation';
 
 export default function Main() {
   return (
     <>
       <City
         initialCity="CITY PHARMACY"
-        subcity=''
+        subcity=""
         sublocations={[
           'City Pharmacy Sharjah',
           'City Pharmacy Jafza',
@@ -16,8 +14,6 @@ export default function Main() {
           'City Pharmacy Dubai',
         ]}
       />
-      <Monitor />
-      {/* <NewLocation /> */}
     </>
   );
 }

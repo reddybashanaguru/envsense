@@ -10,7 +10,7 @@ const Alerts: React.FC = () => {
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4">
           <h1 className="text-2xl font-bold mb-2 sm:mb-0">Alerts Type</h1>
-          <select className="border p-2 rounded" defaultValue="All">
+          <select className="border p-2 rounded-lg" defaultValue="All">
             <option value="All">All</option>
             <option>Option 1</option>
             <option>Option 2</option>

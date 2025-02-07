@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DataForm: React.FC = () => {
+const NewLocation: React.FC = () => {
   return (
     <div className="p-4 bg-white shadow-md rounded-md">
       <div className="mb-6">
@@ -39,7 +39,6 @@ const DataForm: React.FC = () => {
           className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
           placeholder="Enter sample interval"
         />
-        {/* Blue-colored note below the input */}
         <p className="mt-2 text-blue-500 text-sm">
           {' '}
           Note : The sample rate will be automatically adjusted to a minimum if
@@ -98,4 +97,4 @@ const DataForm: React.FC = () => {
   );
 };
 
-export default DataForm;
+export default NewLocation;

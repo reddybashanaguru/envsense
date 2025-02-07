@@ -1,13 +1,16 @@
 import React from 'react';
+import ReportType from './reporttype';
+import MonitoringPoints from './monitoringpoints';
+import Link from 'next/link';
 
 const NewReport: React.FC = () => {
   return (
     <div className="relative p-6 bg-white shadow-md rounded-lg min-h-screen">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">New Report</h1>
 
-      <button className="absolute top-6 right-6 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+      <Link href= {'reports/newreport'}className="absolute top-6 right-6 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
         + Generate New Report
-      </button>
+      </Link>
 
       <h2 className="text-xl font-semibold text-gray-700 mb-4">Filter By</h2>
 
@@ -34,9 +37,10 @@ const NewReport: React.FC = () => {
             Report B
           </option>
         </select>
-        <button  className=" bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">Search</button>
+        <button className=" bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
+          Search
+        </button>
       </div>
-      
 
       <h2 className="text-xl font-semibold text-gray-700 mb-4">All</h2>
 
